@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  background-color: #f1f2f4;
+}
+
+.nav {
+  height: 7dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #dadada;
+  font-family: "Times New Roman", Times, serif;
+  background-color: aqua;
+  text-decoration: none;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 2.3vw;
+  font-size: 1.9vw;
+  font-weight: 600;
+  text-decoration: none !important;
+  color: black;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  font-size: 1.8vw;
+  margin-right: 2vw;
+  text-decoration: none;
+}
+.logo {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  height: 4vh;
+  width: 20vw;
+  border-radius: 12px;
+  border: 2px solid grey;
+  font-size: 0.6em;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+.inputBtn {
+  position: relative;
+}
+.inputBtn input {
+  padding-left: 30px;
+}
+.inputBtn i {
+  position: absolute;
+  top: 24%;
+  left: 10px;
+  font-size: 0.9em;
+  opacity: 0.5;
+  transform: translateX(19vw);
+}
+.Row {
+  height: 40dvh;
+  background-color: white;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
+}
+.container {
+  height: 37dvh;
+  width: 12.5dvw !important;
+
+  margin-left: 30px;
+  border-radius: 7px;
+  border: 1px solid black;
+}
+.top {
+  height: 75%;
+  width: 100%;
+
+  background-repeat: no-repeat;
+}
+.bottom {
+  text-align: center;
+  padding: 10px 0px 5px 0px;
+}
+.bottom button {
+  background-color: aquamarine;
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  margin-top: 2px;
+  font-size: 1em;
+}
+.top img {
+  width: 100%;
+  height: 100%;
+}
+.top.img1 {
+  object-fit: fill;
+}
+
+.container:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  -ms-transform: all 0.3s ease-in-out;
+  transform: all 0.3s ease-in-out;
+}
+.bName {
+  margin-top: 0;
+  padding-top: 0;
+}
+h2 {
+  margin: 10px 0px 0px 10px;
+}
