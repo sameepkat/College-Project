@@ -26,7 +26,7 @@ body {
   gap: 2.3vw;
   font-size: 1.9vw;
   font-weight: 600;
-  text-decoration: none !important;
+  text-decoration: none;
   color: black;
 }
 .right {
@@ -35,7 +35,7 @@ body {
   gap: 3vw;
   font-size: 1.8vw;
   margin-right: 2vw;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .logo {
   width: 43px;
@@ -67,19 +67,81 @@ body {
   opacity: 0.5;
   transform: translateX(19vw);
 }
+.nav i {
+  font-size: 2vw;
+  font-weight: 700;
+  display: none;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar .inputBtn i {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  font-size: 1.2em;
+  opacity: 0.5;
+  transform: translateX(24vw);
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar .inputBtn {
+  padding: 8px 8px 8px 32px;
+}
+.sidebar .btn {
+  font-size: 18px;
+  width: 80%;
+  height: 34px;
+  border-radius: 10px;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 2.8em;
+  margin-left: 50px;
+}
 .Row {
   height: 40dvh;
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
+
   gap: 2vw;
   align-items: center;
   margin: 20px 0px 0px 0px;
 }
-.container {
+
+/* .container {
   height: 37dvh;
   width: 12.5dvw !important;
 
   margin-left: 30px;
+  border-radius: 7px;
+  border: 1px solid black;
+} */
+.container {
+  height: 37dvh;
+  width: calc(14% - 2vw);
+  margin-left: 35px;
   border-radius: 7px;
   border: 1px solid black;
 }
@@ -89,6 +151,7 @@ body {
 
   background-repeat: no-repeat;
 }
+
 .bottom {
   text-align: center;
   padding: 10px 0px 5px 0px;
@@ -100,13 +163,6 @@ body {
   border-radius: 5px;
   margin-top: 2px;
   font-size: 1em;
-}
-.top img {
-  width: 100%;
-  height: 100%;
-}
-.top.img1 {
-  object-fit: fill;
 }
 
 .container:hover {
@@ -120,4 +176,64 @@ body {
 }
 h2 {
   margin: 10px 0px 0px 10px;
+}
+.img1 {
+  height: 23.5dvh;
+  background-size: cover;
+  margin: 1rem 1rem 1rem 2.3rem;
+}
+@media only screen and (max-width: 600px) {
+  .nav {
+    height: 6.4vh;
+  }
+  .nav .right a {
+    display: none;
+  }
+  .nav .inputBtn {
+    display: none;
+  }
+  .nav .title {
+    font-size: 3.1em;
+    margin-left: 8px;
+  }
+  .nav i {
+    font-size: 3em;
+    font-weight: 550;
+    display: block;
+  }
+  .logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-left: 3.9px;
+  }
+  .right {
+    font-size: 10px;
+  }
+  .btn {
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .container {
+    width: calc(39% - 0.9vw);
+    height: 33dvh;
+    margin: 15px 15px;
+    gap: 0.9vw;
+  }
+  .Row {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .top {
+    height: 60%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+  }
+  .img1 {
+    height: 14dvh;
+    background-size: cover;
+    margin: 28px 15px 14px 27px;
+  }
 }
