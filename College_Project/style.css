@@ -63,11 +63,11 @@ body {
   position: absolute;
   top: 24%;
   left: 10px;
-  font-size: 0.9em;
+  font-size: 0.7em;
   opacity: 0.5;
   transform: translateX(19vw);
 }
-.nav i {
+.nav .side i {
   font-size: 2vw;
   font-weight: 700;
   display: none;
@@ -79,18 +79,18 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: lightgray;
+  background-color: #aedef2;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 .sidebar .inputBtn i {
   position: absolute;
-  top: 28%;
-  left: 50%;
-  font-size: 1.2em;
+  top: 34%;
+  left: 95px;
+  font-size: 0.9em;
   opacity: 0.5;
-  transform: translateX(24vw);
+  transform: translateX(28vw);
 }
 .sidebar a {
   padding: 8px 8px 8px 32px;
@@ -181,59 +181,4 @@ h2 {
   height: 23.5dvh;
   background-size: cover;
   margin: 1rem 1rem 1rem 2.3rem;
-}
-@media only screen and (max-width: 600px) {
-  .nav {
-    height: 6.4vh;
-  }
-  .nav .right a {
-    display: none;
-  }
-  .nav .inputBtn {
-    display: none;
-  }
-  .nav .title {
-    font-size: 3.1em;
-    margin-left: 8px;
-  }
-  .nav i {
-    font-size: 3em;
-    font-weight: 550;
-    display: block;
-  }
-  .logo {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    margin-left: 3.9px;
-  }
-  .right {
-    font-size: 10px;
-  }
-  .btn {
-    height: 25px;
-    font-size: 10px;
-  }
-
-  .container {
-    width: calc(39% - 0.9vw);
-    height: 33dvh;
-    margin: 15px 15px;
-    gap: 0.9vw;
-  }
-  .Row {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .top {
-    height: 60%;
-    width: 100%;
-
-    background-repeat: no-repeat;
-  }
-  .img1 {
-    height: 14dvh;
-    background-size: cover;
-    margin: 28px 15px 14px 27px;
-  }
 }
