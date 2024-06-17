@@ -20,7 +20,7 @@
     opacity: 0.5;
     transform: translateX(28vw);
   }
-  .nav i {
+  #sideB {
     font-size: 3em;
     font-weight: 550;
     display: block;
@@ -45,14 +45,14 @@
 
   .container {
     width: calc(50% - 14px);
-    margin: 1vw 1px 5px 3px;
+    margin: 1vw 1px 4px 3px;
   }
 
   .computer {
-    margin-top: 760px;
+    margin-top: 755px;
   }
   .electrical {
-    margin-top: 760px;
+    margin-top: 755px;
   }
   .img1 {
     height: 165px;
