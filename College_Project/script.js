@@ -29,3 +29,29 @@ function toggleSidebar() {
     sidebar.style.width = "0";
   }
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+  var modal = document.getElementById("formModal");
+  var showFormBtn = document.getElementById("showFormBtn");
+  var span = document.getElementsByClassName("close")[0];
+
+  showFormBtn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  document.getElementById("bookForm").onsubmit = function(event) {
+      event.preventDefault();
+      modal.style.display = "none";
+      alert("Form submitted successfully!");
+  }
+});
+
