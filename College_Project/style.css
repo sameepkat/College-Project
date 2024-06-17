@@ -7,6 +7,7 @@ html {
 }
 body {
   background-color: #f1f2f4;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav {
@@ -25,7 +26,7 @@ body {
   align-items: center;
   gap: 2.3vw;
   font-size: 1.9vw;
-  font-weight: 600;
+  font-weight: 550;
   text-decoration: none;
   color: black;
 }
@@ -33,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   gap: 3vw;
+
   font-size: 1.8vw;
   margin-right: 2vw;
   text-decoration: none !important;
@@ -67,9 +69,7 @@ body {
   opacity: 0.5;
   transform: translateX(19vw);
 }
-.nav .side i {
-  font-size: 2vw;
-  font-weight: 700;
+#sideB {
   display: none;
 }
 .sidebar {
@@ -145,6 +145,7 @@ body {
   border-radius: 7px;
   border: 1px solid black;
 }
+
 .top {
   height: 75%;
   width: 100%;
@@ -155,6 +156,12 @@ body {
 .bottom {
   text-align: center;
   padding: 10px 0px 5px 0px;
+}
+.head {
+  font-weight: 500;
+}
+.bottom h3 {
+  font-weight: 400;
 }
 .bottom button {
   background-color: aquamarine;
@@ -181,4 +188,92 @@ h2 {
   height: 23.5dvh;
   background-size: cover;
   margin: 1rem 1rem 1rem 2.3rem;
+}
+#showFormBtn {
+  background-color: aquamarine;
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  margin-top: 2px;
+  font-size: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+
+  top: 21%;
+  float: right;
+  font-size: 2.5em;
+}
+#closeBtn {
+  margin-top: -21px;
+  font-size: 2.5em;
+  transform: translateX(0.6vw);
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: aquamarine;
 }
