@@ -7,7 +7,6 @@ html {
 }
 body {
   background-color: #f1f2f4;
-  font-family: "Roboto", sans-serif;
 }
 
 .nav {
@@ -26,7 +25,7 @@ body {
   align-items: center;
   gap: 2.3vw;
   font-size: 1.9vw;
-  font-weight: 550;
+  font-weight: 600;
   text-decoration: none;
   color: black;
 }
@@ -34,7 +33,6 @@ body {
   display: flex;
   align-items: center;
   gap: 3vw;
-
   font-size: 1.8vw;
   margin-right: 2vw;
   text-decoration: none !important;
@@ -65,11 +63,13 @@ body {
   position: absolute;
   top: 24%;
   left: 10px;
-  font-size: 0.7em;
+  font-size: 0.9em;
   opacity: 0.5;
   transform: translateX(19vw);
 }
-#sideB {
+.nav i {
+  font-size: 2vw;
+  font-weight: 700;
   display: none;
 }
 .sidebar {
@@ -79,18 +79,18 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #aedef2;
+  background-color: lightgray;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 .sidebar .inputBtn i {
   position: absolute;
-  top: 34%;
-  left: 95px;
-  font-size: 0.9em;
+  top: 28%;
+  left: 50%;
+  font-size: 1.2em;
   opacity: 0.5;
-  transform: translateX(28vw);
+  transform: translateX(24vw);
 }
 .sidebar a {
   padding: 8px 8px 8px 32px;
@@ -133,6 +133,7 @@ body {
 /* .container {
   height: 37dvh;
   width: 12.5dvw !important;
+
   margin-left: 30px;
   border-radius: 7px;
   border: 1px solid black;
@@ -144,7 +145,6 @@ body {
   border-radius: 7px;
   border: 1px solid black;
 }
-
 .top {
   height: 75%;
   width: 100%;
@@ -156,12 +156,6 @@ body {
   text-align: center;
   padding: 10px 0px 5px 0px;
 }
-.head {
-  font-weight: 500;
-}
-.bottom h3 {
-  font-weight: 400;
-}
 .bottom button {
   background-color: aquamarine;
   height: 30px;
@@ -169,11 +163,6 @@ body {
   border-radius: 5px;
   margin-top: 2px;
   font-size: 1em;
-}
-.img1 {
-  height: 23.5dvh;
-  background-size: cover;
-  margin: 1rem 1rem 1rem 2.3rem;
 }
 
 .container:hover {
