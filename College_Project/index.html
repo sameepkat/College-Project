@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Libarary Module</title>
-  
+  <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
   <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="mobileui.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -21,24 +27,25 @@
         </div>
         <div class="middle"></div>
         <div class="right">
-          <a>Home</a>
-    
+          <a >Home</a>
           <div class="inputBtn">
             <input type="text" placeholder="Enter Book Name" class="btn" id="search" onkeyup="search()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-            
-         
-          <a>About Us</a>
-          
-          
-          
-          
+          <a >About Us</a>
+          <i class="fa-solid fa-bars" id="sideB" onclick="toggleSidebar()"></i>
         </div>
       </div>
-      
     </navbar>
-
+    <div class="sidebar" id="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+      <a href="#">Home</a>
+      <div class="inputBtn">
+        <input type="text" placeholder="Enter Book Name" class="btn" id="sidebarSearch" onkeyup="search()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <a href="#">About Us</a>
+    </div>
   </header>
 <main>
  <div class="software">
@@ -46,16 +53,49 @@
   <div class="Row">
     <div class="container">
       <div class="top">
-    <img src="" alt="books" class="img1">
+    <img src="https://heritagebooks.com.np/wp-content/uploads/2022/11/A-complete-handbook-of-Calculus.jpg" alt="books" class="img1">
       </div>
       <div class="bottom">
     <h3>Calculus-I</h3>
-    <button>Lend </button>
+    <button id="showFormBtn">Lend</button>
+
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <form class="form-container" id="bookForm">
+                <div class="form-group">
+                    <label for="bookName">Enter Book Name</label>
+                    <input type="text" id="bookName" name="bookName" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookcode">Enter Book Code</label>
+                    <input type="text" id="bookcode" name="bookcode" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Enter Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Enter Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="sDate">Enter Starting Date</label>
+                    <input type="date" id="sDate" name="sDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="eDate">Enter Ending Date</label>
+                    <input type="date" id="eDate" name="eDate" required>
+                </div>
+                <button type="submit">Sumbit</button>
+            </form>
+        </div>
+    </div>
       </div>
     </div>
     <div class="container">
       <div class="top">
-    <img src="" alt="books" class="img1">
+    <img src="https://heritagebooks.com.np/wp-content/uploads/2022/12/A-Textbook-of-Programming-Principle-and-Concept-in-C-Language-IX.jpg" alt="books" class="img1">
       </div>
       <div class="bottom">
     <h3>Programming In C</h3>
@@ -64,7 +104,7 @@
     </div>
     <div class="container">
       <div class="top">
-    <img src="" alt="books" class="img1">
+    <img src="https://static-01.daraz.com.np/p/84942e49435e4619798bcefd2028c6a9.jpg_750x750.jpg_.webp" alt="books" class="img1">
       </div>
       <div class="bottom">
     <h3>Discrete Math</h3>
@@ -73,7 +113,7 @@
     </div>
     <div class="container">
       <div class="top">
-    <img src="" alt="books" class="img1">
+    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1223629332i/1262200.jpg" alt="books" class="img1">
       </div>
       <div class="bottom">
     <h3 id="bName">PST</h3>
@@ -82,7 +122,7 @@
     </div>
     <div class="container">
       <div class="top">
-    <img src="c.jpg" alt="books" class="img1">
+    <img src="https://heritagebooks.com.np/wp-content/uploads/2021/02/IMG_0003-1-scaled.jpg" alt="books" class="img1">
       </div>
       <div class="bottom">
     <h3>Drawing</h3>
@@ -91,7 +131,7 @@
     </div>
     <div class="container">
       <div class="top">
-    <img src="" alt="books" class="img1">
+    <img src="https://heritagebooks.com.np/wp-content/uploads/2021/11/Digital-Logic-and-Computer-Design.jpg" alt="books"class="img1" >
       </div>
       <div class="bottom">
     <h3>Digital Logic</h3>
