@@ -78,7 +78,6 @@ body {
 .container {
   height: 37dvh;
   width: 12.5dvw !important;
-
   margin-left: 30px;
   border-radius: 7px;
   border: 1px solid black;
@@ -107,6 +106,7 @@ body {
 }
 .top.img1 {
   object-fit: fill;
+  filter: drop-shadow(1 px 1 px 20px auto);
 }
 
 .container:hover {
