@@ -58,4 +58,7 @@
     height: 165px;
     background-size: cover;
   }
+  .footer {
+    display: none;
+  }
 }

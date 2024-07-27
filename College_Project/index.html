@@ -27,7 +27,7 @@
         </div>
         <div class="middle"></div>
         <div class="right">
-          <a >Home</a>
+         <a>Home</a>
           <div class="inputBtn">
             <input type="text" placeholder="Enter Book Name" class="btn" id="search" onkeyup="search()">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -62,7 +62,7 @@
     <div id="formModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeBtn">&times;</span>
-            <form class="form-container" id="bookForm" method="post" action="index.php">
+            <form class="form-container" id="bookForm" method="post" action="connect.php">
                 <div class="form-group">
                     <label for="bookName">Enter Book Name</label>
                     <input type="text" id="bookName" name="bookName" required>
@@ -126,8 +126,42 @@
       </div>
       <div class="bottom">
     <h3>Drawing</h3>
-    <button>Lend </button>
+    <button id="showFormBtn">Lend</button>
+    <div id="formModal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeBtn">&times;</span>
+          <form class="form-container" id="bookForm" method="post" action="index.php">
+              <div class="form-group">
+                  <label for="bookName">Enter Book Name</label>
+                  <input type="text" id="bookName" name="bookName" required>
+              </div>
+              <div class="form-group">
+                  <label for="bookcode">Enter Book Code</label>
+                  <input type="text" id="bookcode" name="bookcode" required>
+              </div>
+              <div class="form-group">
+                  <label for="name">Enter Name</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Enter Email</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="sDate">Enter Starting Date</label>
+                  <input type="date" id="sDate" name="sDate" required>
+              </div>
+              <div class="form-group">
+                  <label for="eDate">Enter Ending Date</label>
+                  <input type="date" id="eDate" name="eDate" required>
+              </div>
+              <button type="submit" id="sUmbit">Sumbit</button>
+          </form>
       </div>
+  </div>
+    </div>
+  
+      
     </div>
     <div class="container">
       <div class="top">
