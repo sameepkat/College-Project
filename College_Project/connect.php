@@ -1,29 +1,21 @@
 <?php
-$bname = $_POST["bookName"];
-$bcode = $_POST["bookCode"];
-$name = $_POST["name"];
-$email = $_POST["email"];
-$Sdate = $_POST["sDate"];
-$edate = $_POST["eDate"];
+$bname = $_GET["bookName"];
+$bcode = $_GET["bookcode"];
+$name = $_GET["name"];
+$email = $_GET["email"];
+$sdate = $_GET["sDate"];
+$edate = $_GET["eDate"];
 
-$conn = new mysqli('localhost', 'root1', 'root1', 'library_details');
-
-
-if ($conn->connect_error) {
-  echo "$conn->connect_error";
-  die("Connection Failed: " . $conn->connect_error);
-} else {
-
-  $stmt = $conn->prepare("INSERT INTO data (B_Name, B_Code, Name, Email, sDate, eDate) VALUES ('?', ?, '?', '?', '?', '?')");
-
-  $stmt->bind_param("ssssss", $bname, $bcode, $name, $email, $Sdate, $edate);
-
-  $execval = $stmt->execute();
-  if ($execval) {
-    echo "Data inserted successfully!";
-  } else {
-    echo "Error: " . $stmt->error;
-  }
-  $stmt->close();
-  $conn->close();
+$success = null;
+header('Content-Type: application/json');
+$conn = mysqli_connect('localhost', 'root', '', 'library_details');
+$query = "INSERT INTO data (B_Name, B_Code, Name, Email, sDate, eDate) VALUES ('{$bname}', {$bcode}, '{$name}', '{$email}', '{$sdate}', '{$edate}')";
+$result = mysqli_query($conn, $query);
+if($result)
+{
+  echo json_encode($result);
 }
+else{
+  echo json_encode($result);
+}
+mysqli_close($conn);
