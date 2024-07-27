@@ -47,7 +47,7 @@
       <a href="#">About Us</a>
     </div>
   </header>
-<main>
+<main class="check">
  <div class="software">
   <h2 class="head">Software Engineering</h2>
   <div class="Row">
@@ -62,7 +62,7 @@
     <div id="formModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeBtn">&times;</span>
-            <form class="form-container" id="bookForm">
+            <form class="form-container" id="bookForm" method="post" action="index.php">
                 <div class="form-group">
                     <label for="bookName">Enter Book Name</label>
                     <input type="text" id="bookName" name="bookName" required>
@@ -87,7 +87,7 @@
                     <label for="eDate">Enter Ending Date</label>
                     <input type="date" id="eDate" name="eDate" required>
                 </div>
-                <button type="submit">Sumbit</button>
+                <button type="submit" id="sUmbit">Sumbit</button>
             </form>
         </div>
     </div>
@@ -262,6 +262,23 @@
   
   
 </main>
+<footer>
+  <div class="footer">
+    <div class="footer-left">
+      <img src="logo.png" alt="Library Module Logo" class="flogo">
+      <p>&copy; Copyright 2023 Library Module. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <p>GitHub</p>
+      <a href="https://github.com/dhunganabimal/College-Project" target="_blank"><img src="https://i.pinimg.com/736x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg" alt="GitHub" class="flogo"></a>
+      
+      
+    </div>
+  </div>
+    
+  
+</footer>
 <script src="script.js"></script>
+
 </body>
 </html>
